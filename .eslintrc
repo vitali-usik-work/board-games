@@ -1,0 +1,31 @@
+{
+  "env": {
+    "browser": true
+  },
+  "extends": "airbnb-base/legacy",
+  "globals": {
+    "_": true,
+    "$": true,
+    "angular": true,
+    "async": true,
+    "moment": true,
+    "numeral": true,
+    "VerEx": true,
+    "Uint8Array": true
+  },
+  "rules": {
+    "consistent-return": "off",
+    "func-names": "off",
+    "global-require": "off",
+    "max-len": "off",
+    "new-cap": "off",
+    "no-console": "off",
+    "no-param-reassign": "off",
+    "no-underscore-dangle": "off",
+    "no-use-before-define": [1, "nofunc"],
+    "space-before-function-paren": "off",
+    "spaced-comment": "off",
+    "vars-on-top": "off",
+    "wrap-iife": "off"
+  }
+}

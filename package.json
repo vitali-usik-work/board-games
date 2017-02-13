@@ -1,0 +1,27 @@
+{
+  "name": "board-games",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitali-usik-work/board-games.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vitali-usik-work/board-games/issues"
+  },
+  "homepage": "https://github.com/vitali-usik-work/board-games#readme",
+  "devDependencies": {
+    "eslint": "^3.15.0",
+    "lodash": "^4.17.4",
+    "webpack": "^2.2.1"
+  }
+}
