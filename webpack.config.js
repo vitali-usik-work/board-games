@@ -1,9 +1,21 @@
-var path = require('path');
+'use strict';
+
+var webpack = require('webpack');
+var CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
+
+var __dirname = 'board-games';
 
 module.exports = {
-  entry: './app/index.js',
+  context: __dirname + '/app',
+  entry: {
+    app: './app/app.js',
+    vendor: ['angular']
+  },
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
-  }
+    path: __dirname + '/js',
+    filename: 'app.bundle.js'
+  },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
+  ]
 };
