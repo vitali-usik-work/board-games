@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
-import { AppComponent } from './app.component';
-import {
-  Main,
-  NotesContainer
-} from './containers';
+import { App } from './app';
+import { Main, NotesContainer } from './containers';
 import { AppBar } from './ui';
 import { NoteCard } from './components/index';
 
@@ -13,13 +10,13 @@ import { NoteCard } from './components/index';
     BrowserModule
   ],
   declarations: [
-    AppComponent,
+    App,
     Main,
     AppBar,
     NoteCard,
     NotesContainer
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ App ]
 })
 
 export class AppModule { }
