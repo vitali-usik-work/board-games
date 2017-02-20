@@ -11,6 +11,12 @@ import {
 export class NoteCard {
   @Input() note = {};
 
+  showCheck: boolean = false;
+
+  toggleCheck() {
+    this.showCheck = !this.showCheck;
+  }
+
   onChecked() {
     console.log('note clicked');
   }
