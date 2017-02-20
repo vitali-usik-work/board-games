@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { Main } from './containers';
+import { AppBar } from './ui';
 
 @NgModule({
   imports: [
@@ -9,7 +10,8 @@ import { Main } from './containers';
   ],
   declarations: [
     AppComponent,
-    Main
+    Main,
+    AppBar
   ],
   bootstrap: [ AppComponent ]
 })
