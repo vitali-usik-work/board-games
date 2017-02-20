@@ -10,4 +10,8 @@ import {
 })
 export class NoteCard {
   @Input() note = {};
+
+  onChecked() {
+    console.log('note clicked');
+  }
 };
