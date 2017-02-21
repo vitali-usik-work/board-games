@@ -6,9 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['notes.css']
 })
 export class NotesContainer {
-  note = {
+  notes = [
+    {
     title: 'this is note',
     value: 'eat some food',
     color: 'lightblue'
+    },
+    {
+      title: 'note 2',
+      value: 'eat some food',
+      color: 'lightblue'
+    },
+    {
+      title: 'another note',
+      value: 'eat some food',
+      color: 'lightblue'
+    }
+  ];
+
+  onNoteChecked(i: number) {
+    this.notes.splice(i, 1);
   }
 };
