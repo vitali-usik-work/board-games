@@ -3,7 +3,7 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { App } from './app';
 import { Main, NotesContainer } from './containers';
-import { AppBar, NoteCreator } from './ui';
+import { AppBar, NoteCreator, ColorPicker } from './ui';
 import { NoteCard } from './components/index';
 
 @NgModule({
@@ -17,7 +17,8 @@ import { NoteCard } from './components/index';
     AppBar,
     NoteCard,
     NotesContainer,
-    NoteCreator
+    NoteCreator,
+    ColorPicker
   ],
   bootstrap: [ App ]
 })
