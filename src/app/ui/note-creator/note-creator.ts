@@ -22,6 +22,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
         (submit)="onCreateForm()"
         class="row">
         <input
+          *ngIf="fullForm"
           type="text"
           [(ngModel)]="newNote.title"
           name="newNoteTitle"
@@ -29,11 +30,14 @@ import { Component, Output, EventEmitter } from '@angular/core';
           class="col-xs-10 title">
         <input
           type="text"
+          (focus)="toggle(true)"
           [(ngModel)]="newNote.value"
           name="newNoteValue"
           placeholder="Take a note..."
           class="col-xs-10">
-        <div class="actions col-xs-12 row between-xs">
+        <div
+          *ngIf="fullForm"
+          class="actions col-xs-12 row between-xs">
           <button
             type="submit"
             class="btn-light">
@@ -50,6 +54,7 @@ export class NoteCreator {
     title: '',
     value: ''
   };
+  fullForm: boolean = false;
 
   onCreateForm() {
     const { title, value } = this.newNote;
@@ -59,6 +64,7 @@ export class NoteCreator {
     }
 
     this._reset();
+    this.toggle(false);
   }
 
   _reset() {
@@ -66,5 +72,9 @@ export class NoteCreator {
       title: '',
       value: ''
     };
+  }
+
+  toggle(value: boolean) {
+    this.fullForm = value;
   }
 };
